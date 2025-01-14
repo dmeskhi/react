@@ -147,7 +147,7 @@ function getBook(id) {
 const book = getBook(1);
 book;
 
-const { title, author, genres } = book;
+const { title, author, genres, pages, publicationDate } = book;
 console.log(title, author, genres);
 
 const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
@@ -164,3 +164,6 @@ const updatedBook = {
   pages: 1210,
 };
 updatedBook;
+
+const summary = `${title}, a ${pages}-page long book, was written by ${author} and published in ${publicationDate}`;
+summary;
