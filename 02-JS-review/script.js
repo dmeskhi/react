@@ -144,6 +144,7 @@ function getBook(id) {
 }
 
 // Destructuring
+/*
 const book = getBook(2);
 book;
 
@@ -177,3 +178,4 @@ summary;
 //Ternary operator
 const pagesRange = pages > 1000 ? "over a 1000" : "less than a 1000";
 pagesRange;
+*/
