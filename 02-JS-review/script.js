@@ -179,6 +179,15 @@ summary;
 const pagesRange = pages > 1000 ? "over a 1000" : "less than a 1000";
 pagesRange;
 */
+
+function getTotalReviewCount(book) {
+  const goodreads = book.reviews?.goodreads?.reviewsCount;
+  const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+  librarything;
+  return goodreads + librarything;
+}
+
+// Array map() method
 const books = getBooks();
 const x = [1, 2, 3, 4, 5].map((el) => el * 2);
 books;
@@ -191,5 +200,6 @@ titles;
 const essentialData = books.map((book) => ({
   title: book.title,
   author: book.author,
+  reviewsCount: getTotalReviewCount(book),
 }));
 essentialData;
