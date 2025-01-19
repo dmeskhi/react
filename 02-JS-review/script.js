@@ -179,3 +179,17 @@ summary;
 const pagesRange = pages > 1000 ? "over a 1000" : "less than a 1000";
 pagesRange;
 */
+const books = getBooks();
+const x = [1, 2, 3, 4, 5].map((el) => el * 2);
+books;
+console.log(x);
+
+// Get book titles only
+const titles = books.map((book) => book.title);
+titles;
+
+const essentialData = books.map((book) => ({
+  title: book.title,
+  author: book.author,
+}));
+essentialData;
